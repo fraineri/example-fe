@@ -2,10 +2,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useEffect } from "react";
 import axios from "axios";
+const BACK_IP = process.env.BACK_IP;
 
 function App() {
   useEffect(() => {
-    axios.get("http://34.196.32.172:3000/").then((res) => {
+    console.log("process.env", JSON.stringify(process.env));
+    console.log("BACK_IP", BACK_IP);
+    axios.get(`http://${BACK_IP}:3000/`).then((res) => {
       console.log(res);
     });
   }, []);
