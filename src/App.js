@@ -2,7 +2,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useEffect } from "react";
 import axios from "axios";
-const BACK_IP = process.env.BACK_IP;
+
+
+const BACK_IP = process.env.REACT_APP_BACK_IP;
 
 function App() {
   useEffect(() => {
